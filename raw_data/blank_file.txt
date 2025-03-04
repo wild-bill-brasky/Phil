@@ -1,0 +1,1 @@
+# This folder will be populated with the raw scraped and cleaned data from the internet. To be used for RAG development and debug.
