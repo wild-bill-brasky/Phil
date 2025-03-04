@@ -28,7 +28,7 @@ o          _   ~----~      ___---~
     - Functioning SMTP bridge or server with credentials
 
 # Installion:
-    - Running the **setup.sh** shell script will isntall the Ollama API, the Llama3.2 LLM (this can be changed in the config file), and
+    - Running the **setup.sh** shell script will install the Ollama API, the Llama3.2 LLM (this can be changed in the config file), and
       a python virtual environment. This will be created in the working directory in the folder /phil_env. DO NOT RUN AS ROOT.
 
 # Scope:
