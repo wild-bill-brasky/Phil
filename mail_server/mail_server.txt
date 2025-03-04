@@ -1,0 +1,1 @@
+# This directory contains the code to communicate with a Proton Bridge server, sending mail via SMTP. 
