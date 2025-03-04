@@ -31,7 +31,6 @@ def email_body(filename, binary, mail_list, email_message):
         rep_type = ''
 
     subject = f'{rep_type} Intel Report - Phil'
-    #body = f'Greetings,\n\nPlease find attached {rep_type} Intelligence report for {get_time()}.\n\nBest regards,\n\nPhil'
 
     message = MIMEMultipart()
     message["From"] = svc_data.svc_email
