@@ -40,6 +40,7 @@ class config_items():
     scraped_data = []
     source_type = ''
     set_llm = ''
+    repeat_last_n = 0
     set_num_ctx = 0
     set_temp = .0
     set_keep_alive = 0
@@ -83,6 +84,9 @@ def config_read():
                 elif 'num_ctx' in line:
                     line = line.split('=')
                     config_items.set_num_ctx = int(line[1].strip())
+                elif 'repeat_last_n' in line:
+                    line = line.split('=')
+                    config_items.repeat_last_n = int(line[1].strip())
                 elif 'temp' in line:
                     line = line.split('=')
                     config_items.set_temp = float(line[1].strip())
@@ -164,7 +168,13 @@ def build_call(role, content):
     return
 
 def ollama_call(call_message, p_type):
-    static = ollama.chat(model=f'{config_items.set_llm}', options={'temperature': .0, 'num_ctx': config_items.set_num_ctx,'keep_alive': 0}, messages=call_message)
+    static = ollama.chat(model=f'{config_items.set_llm}', options={
+        'temperature': config_items.set_temp, 
+        'num_ctx': config_items.set_num_ctx,
+        'keep_alive': config_items.set_keep_alive, 
+        'repeat_last_n': config_items.repeat_last_n
+        }, 
+        messages=call_message)
     build_response(static, p_type)
     return
 
