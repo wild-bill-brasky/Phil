@@ -103,7 +103,7 @@ def url_parser(i):
 
 def abuse_header():
     headers = {
-        'Auth-Key': '33dbb277a037697a9435055c2c6ce0f251e86f166261b3c2',
+        'Auth-Key': '',
         'Content-Type': 'application/x-www-form-urlencoded',
     }
     return headers
