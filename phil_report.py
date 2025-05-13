@@ -199,30 +199,15 @@ def script_start():
     if argv[1] == '-cyber':
         config_items.source_type = 'Counter Threat Intelligence'
         config_items.p_type = 'cyber'
-    elif argv[1] == '-msm':
-        config_items.source_type = 'Main Stream Media'
-        config_items.p_type = 'msm'
     elif argv[1] == '-finance':
         config_items.source_type ='Finance'
         config_items.p_type = 'finance'
     elif argv[1] == '-defense':
         config_items.source_type = 'Defense'
         config_items.p_type = 'defense'
-    elif argv[1] == '-russia':
-        config_items.source_type = 'Russian Media'
-        config_items.p_type = 'russian'
-    elif argv[1] == '-breaches':
-        config_items.source_type = 'Cyber Breaches'
-        config_items.p_type = 'breaches'
     elif argv[1] == '-aerospace':
         config_items.source_type = 'Aerospace'
         config_items.p_type = 'aerospace'
-    elif argv[1] == '-threats':
-        config_items.source_type = 'Threat Actors'
-        config_items.p_type = 'threat_actors'
-    elif argv[1] == '-cve':
-        config_items.source_type = 'CVE'
-        config_items.p_type = 'cve'
     else:
         exit_app('Invalid argument.\nValid arguments include -cyber, -defense, -finance, -msm, -breaches, or -russia\n')
     config_read()
